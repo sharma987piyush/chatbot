@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+
+  name: chatbot-service
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8501
+  selector:
+    app: chatbot
+  type: LoadBalancer
